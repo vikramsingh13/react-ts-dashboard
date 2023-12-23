@@ -26,11 +26,14 @@ const Sidebar: React.FC<SidebarProps> = (props: SidebarProps) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  // TODO: use props or theme context to refactor these styles
+  const sidebarStyle = "min-h-screen p-4 bg-gray-200 text-black";
+
   return (
-    <div className="sidebar min-h-full p-4">
+    <div className={sidebarStyle}>
       <div className="flex justify-end items-end text-2xl">
-        {isSidebarOpen && <FaCircleChevronRight onClick={toggleSidebar} />}
-        {!isSidebarOpen && <FaCircleChevronLeft onClick={toggleSidebar} />}
+        {isSidebarOpen && <FaCircleChevronLeft onClick={toggleSidebar} />}
+        {!isSidebarOpen && <FaCircleChevronRight onClick={toggleSidebar} />}
       </div>
 
       {/* TODO: refactor to make sure the code doesn't repeat itself for open and closed sidebar */}

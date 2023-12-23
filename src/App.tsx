@@ -1,14 +1,24 @@
-import { useState } from 'react';
-import './App.css';
-import Dashboard from './views/dashboard';
+import { useState } from "react";
+import "./App.css";
+import "@radix-ui/themes/styles.css";
+import Dashboard from "./views/dashboard";
+import { Theme } from "@radix-ui/themes";
 
 function App() {
-
   return (
     <>
-      <Dashboard />
+      <Theme
+        accentColor="mint"
+        grayColor="gray"
+        panelBackground="solid"
+        scaling="100%"
+        radius="full"
+        appearance="inherit"
+      >
+        <Dashboard />
+      </Theme>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

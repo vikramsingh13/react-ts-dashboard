@@ -1,23 +1,26 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
+import React from "react";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+import { Flex, Text } from "@radix-ui/themes";
 
 type DashboardProps = {};
 
 const Dashboard: React.FC<DashboardProps> = ({}) => {
   return (
-    <div className="flex flex-row min-h-full">
-
+    <Flex className="w-screen" direction="row">
       <Sidebar />
 
-      { /* this div makes sure the content is not hidden behind the sidebar */ }
-      <div>
+      {/* this div makes sure the content is not hidden behind the sidebar */}
+      <Flex grow="1" direction="column">
         <Navbar />
-        content goes here
-      </div>
-    
-    </div>
-  )
+
+        {/* content will be displayed based on routes */}
+        <Flex grow="1" justify="center" align="center">
+          <Text size="6">content goes here</Text>
+        </Flex>
+      </Flex>
+    </Flex>
+  );
 };
 
 export default Dashboard;
