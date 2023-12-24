@@ -37,4 +37,19 @@ const NotificationData = [
   }
 ];
 
-export default NotificationData;
+const AccountDropdownData = [
+  {
+    label: "Profile",
+    redirectLink: "/",
+  },
+  {
+    label: "Settings",
+    redirectLink: "/",
+  },
+  {
+    label: "Logout",
+    redirectLink: "/",
+  },
+];
+
+export { NotificationData, AccountDropdownData };

@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = (props: SidebarProps) => {
   };
 
   // TODO: use props or theme context to refactor these styles
-  const sidebarStyle = "min-h-screen p-4 bg-gray-200 text-black";
+  const sidebarStyle = "min-h-screen p-4 bg-teal-200 text-black";
 
   return (
     <div className={sidebarStyle}>
